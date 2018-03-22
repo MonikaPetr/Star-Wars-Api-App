@@ -1,0 +1,27 @@
+<div class="hero">
+  <h1>Star Wars App</h1>
+  <mat-form-field>
+    <mat-select placeholder="Star Wars People" (change)="onChange($event.value)">
+      <mat-option *ngFor="let all of allStars" value="{{all.name}}">{{all.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Star Wars Planets" (change)="onChangePlanet($event.value)">
+      <mat-option *ngFor="let all of allPlanets" value="{{all.name}}">{{all.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Star Wars Species" (change)="onChangeSpecies($event.value)">
+      <mat-option *ngFor="let all of allSpecies" value="{{all.name}}">{{all.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-card id="people" >
+  You will see Star Wars people here!
+  </mat-card>
+  <mat-card id="planet" >
+  You will see Star Wars planets here!
+  </mat-card>
+  <mat-card id="species" >
+  You will see Star Wars species here!
+  </mat-card>
+</div>
